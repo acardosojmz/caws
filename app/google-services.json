@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "889587433955",
+    "project_id": "caws-a9d0b",
+    "storage_bucket": "caws-a9d0b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889587433955:android:6d1ecc631a26607c9ba0d6",
+        "android_client_info": {
+          "package_name": "edu.tecnm.caws"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDd_KaZfa1qI-k9JJznFPDCqAHx9XeL-Cs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
