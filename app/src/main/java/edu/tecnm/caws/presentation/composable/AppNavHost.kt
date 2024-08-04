@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import edu.tecnm.caws.presentation.screen.HomeScreen
+import edu.tecnm.caws.presentation.screen.ListCourseScreen
 import edu.tecnm.caws.presentation.screen.LoginScreen
 import edu.tecnm.caws.presentation.screen.UserRegisterScreen
 import edu.tecnm.caws.presentation.ui.NavigationItem
@@ -36,6 +37,11 @@ fun AppNavHost(
             route = NavigationItem.UserRegister.route // Route for the destination
         ) {
             UserRegisterScreen(navController) // Composable for the destination
+        }
+        composable( // This method adds the composable to the NavGraphBuilder
+            route = NavigationItem.CourseList.route // Route for the destination
+        ) {
+            ListCourseScreen(navController) // Composable for the destination
         }
     }
 }

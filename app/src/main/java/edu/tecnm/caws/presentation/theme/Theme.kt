@@ -1,6 +1,5 @@
 package edu.tecnm.caws.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -10,6 +9,12 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
+import edu.tecnm.caws.presentation.theme.Pink40
+import edu.tecnm.caws.presentation.theme.Pink80
+import edu.tecnm.caws.presentation.theme.Purple40
+import edu.tecnm.caws.presentation.theme.Purple80
+import edu.tecnm.caws.presentation.theme.PurpleGrey40
+import edu.tecnm.caws.presentation.theme.PurpleGrey80
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,

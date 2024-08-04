@@ -17,6 +17,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
 import edu.tecnm.caws.presentation.screen.HomeScreen
+import edu.tecnm.caws.presentation.screen.ListCourseScreen
 import edu.tecnm.caws.presentation.screen.LoginScreen
 import edu.tecnm.caws.presentation.screen.UserRegisterScreen
 import edu.tecnm.caws.presentation.ui.NavigationItem
@@ -47,5 +48,6 @@ fun CawsApp() {
         composable("login") { LoginScreen(navController) }
         composable("home") { HomeScreen(navController) }
         composable("userRegister") { UserRegisterScreen(navController) }
+        composable("listCourse") { ListCourseScreen(navController) }
     }
 }

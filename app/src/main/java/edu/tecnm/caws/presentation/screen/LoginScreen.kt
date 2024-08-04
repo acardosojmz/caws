@@ -64,8 +64,8 @@ fun LoginScreen(navController: NavController,
             Text(text = state.value.error, color = Color.Red)
         }
         if (state.value.success){
-            navController.navigate("UserRegister") {
-                popUpTo("UserLogin") { inclusive = true }
+            navController.navigate("listCourse") {
+                popUpTo("listCourse") { inclusive = true }
             }
         }
     }

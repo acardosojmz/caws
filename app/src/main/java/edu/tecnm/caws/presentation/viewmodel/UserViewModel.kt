@@ -68,21 +68,21 @@ class UserViewModel @Inject constructor(
 
 
 }
-    data class RegisterState(
-        val email: String = "",
-        val password: String = "",
-        val confirmPassword: String="",
-        val user: FirebaseUser? = null,
-        val error: String = "",
-        val success: Boolean=false
-    )
+data class RegisterState(
+    val email: String = "",
+    val password: String = "",
+    val confirmPassword: String="",
+    val user: FirebaseUser? = null,
+    val error: String = "",
+    val success: Boolean=false
+)
 
 
-    sealed class RegisterEvent {
-        data class EmailChanged(val email: String) : RegisterEvent()
-        data class PasswordChanged(val password: String) : RegisterEvent()
-        data class ConfirmPasswordChanged(val confirmPassword: String) : RegisterEvent()
-        data class ResultChanged(val success: Boolean): RegisterEvent()
-        data object RegisterClicked : RegisterEvent()
-        data object EmptyControls:RegisterEvent()
-    }
+sealed class RegisterEvent {
+    data class EmailChanged(val email: String) : RegisterEvent()
+    data class PasswordChanged(val password: String) : RegisterEvent()
+    data class ConfirmPasswordChanged(val confirmPassword: String) : RegisterEvent()
+    data class ResultChanged(val success: Boolean): RegisterEvent()
+    data object RegisterClicked : RegisterEvent()
+    data object EmptyControls:RegisterEvent()
+}

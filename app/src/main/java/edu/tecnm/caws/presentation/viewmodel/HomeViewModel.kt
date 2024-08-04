@@ -4,9 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.FirebaseUser
 import dagger.hilt.android.lifecycle.HiltViewModel
-import edu.tecnm.caws.domain.FirebaseAuthRepository
 import edu.tecnm.caws.domain.UserRepository
-import edu.tecnm.caws.domain.model.User
 import edu.tecnm.caws.domain.usecase.LogoutUser
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

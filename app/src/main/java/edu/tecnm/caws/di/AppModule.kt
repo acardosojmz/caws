@@ -6,11 +6,11 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import edu.tecnm.caws.data.FirebaseAuthRepositoryImpl
+import edu.tecnm.caws.data.CourseRepositoryImpl
 import edu.tecnm.caws.data.FirebaseAuthService
 import edu.tecnm.caws.data.FirebaseFirestoreService
 import edu.tecnm.caws.data.UserRepositoryImpl
-import edu.tecnm.caws.domain.FirebaseAuthRepository
+import edu.tecnm.caws.domain.CourseRepository
 import edu.tecnm.caws.domain.UserRepository
 
 import javax.inject.Singleton
@@ -23,12 +23,6 @@ object AppModule {
     @Singleton
     fun provideFirebaseAuth(): FirebaseAuth {
         return FirebaseAuth.getInstance()
-    }
-
-    @Provides
-    @Singleton
-    fun provideFirebaseAuthRepository(auth: FirebaseAuth): FirebaseAuthRepository {
-        return FirebaseAuthRepositoryImpl(auth)
     }
 
     // ----------
@@ -55,4 +49,11 @@ object AppModule {
     fun provideUserRepository(firebaseAuthService: FirebaseAuthService): UserRepository {
         return UserRepositoryImpl(firebaseAuthService)
     }
+
+    @Provides
+    @Singleton
+    fun provideCourseRepository(firebaseFirestoreService: FirebaseFirestoreService): CourseRepository {
+        return CourseRepositoryImpl(firebaseFirestoreService)
+    }
+
 }
